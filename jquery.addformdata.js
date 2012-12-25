@@ -15,8 +15,8 @@
         return arr;
     };
 
-    $.fn.addFormData = function(name, obj){
-        var arr = unserialise(obj, name);
+    $.fn.addFormData = function(obj){
+        var arr = unserialise(obj);
         for(var i = 0, len = arr.length; i < len; i++) {
             this.append(
                 $('<input type="hidden">').attr(arr[i])
